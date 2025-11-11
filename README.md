@@ -27,34 +27,8 @@ Integrate `wildcard-expect` with your Chai assertions. The library provides an `
 Let's say you're testing an API endpoint that returns a chat message object with a unique ID and a creation timestamp:
 
 ```typescript
-import { expect } from "chai";
-import wildcard from "@bonniernews/wildcard-expect";
+import wildcard from "@bonniernews/wildcard-expect"; // instead of import { expect } from "chai";
 
-// Assume this is your actual response body
-const responseBody = {
-  chatId: "some-chat-id-123",
-  replies: [
-    {
-      id: "a1b2c3d4-e5f6-7890-1234-567890abcdef", // A dynamically generated UUID
-      timestamp: "2023-10-27T10:00:00.000Z", // A dynamically generated date string
-      role: "assistant",
-      content: "Hello there!",
-      metadata: {
-        source: "AI",
-        version: 1,
-        details: "some-dynamic-string",
-      },
-    },
-    {
-      id: "b2c3d4e5-f6a7-8901-2345-67890abcdef1",
-      timestamp: "2023-10-27T10:05:00.000Z",
-      role: "user",
-      content: "Hi!",
-    },
-  ],
-  traceId: "5f3a2b1c4d6e8f0a1b2c3d4e5f6a7b8c", // A trace ID
-  url: "https://example.com/chat/123",
-};
 
 describe("Chat API", () => {
   it("should return a valid chat structure with dynamic fields", () => {
