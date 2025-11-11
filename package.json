@@ -1,6 +1,6 @@
 {
   "name": "@bonniernews/wildcard-expect",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wildcard expect, chai extensions for easier testing of dynamic values.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -43,10 +43,11 @@
   "devDependencies": {
     "@bonniernews/eslint-config": "^1.2.0",
     "@bonniernews/tsconfig": "^0.0.2",
-    "@types/chai": "^5.0.0",
+    "@types/chai": "^5.2.3",
     "@types/mocha": "^10.0.10",
+    "@types/node": "^24.10.0",
     "@types/sinon": "^17.0.3",
-    "chai": "^5.1.1",
+    "chai": "^5.3.3",
     "eslint": "^8.57.1",
     "mocha": "^11.0.0",
     "mocha-cakes-2": "^3.3.0",
@@ -58,8 +59,5 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "dependencies": {
-    
   }
 }

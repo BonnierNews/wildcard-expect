@@ -1,3 +1,5 @@
+import { expect } from "chai";
+
 import { isValidTraceId } from "./is-valid-traceid";
 import { isValidUrl } from "./is-valid-url";
 import { isValidUuid } from "./is-valid-uuid";
@@ -99,7 +101,7 @@ function validateWildcards(expected: any, actual: any, path = ""): void {
   }
 }
 
-function createExpectWithWildCard(actual: any) {
+function createExpectWithWildCard(actual: any): ReturnType<typeof expect> {
   const methods = [ "equal", "eql", "property", "include", "members", "keys" ];
   const deepMethods = [ "equal", "include", "eql" ];
 
