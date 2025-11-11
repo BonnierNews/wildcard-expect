@@ -95,7 +95,7 @@ Run `npm run bumpp` or:
 3.  Run the publish command:
 
     ```bash
-    npm run publish
+    npm publish --access public
     ```
 
     This will publish the package to the public npm registry.
