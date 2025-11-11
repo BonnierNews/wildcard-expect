@@ -1,6 +1,6 @@
 {
   "name": "@bonniernews/wildcard-expect",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Wildcard expect, chai extensions for easier testing of dynamic values.",
   "type": "module",
   "main": "./dist/index.cjs",

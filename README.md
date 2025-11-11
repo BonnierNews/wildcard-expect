@@ -5,9 +5,9 @@ A simple utility for extending Chai's `expect` with powerful wildcard matching, 
 ## 🚀 Installation
 
 ```bash
-npm install @bonniernews/wildcard-expect chai
+npm install @bonniernews/wildcard-expect
 # or
-yarn add @bonniernews/wildcard-expect chai
+yarn add @bonniernews/wildcard-expect
 ```
 
 You'll also need to make sure Chai is set up in your test environment.
