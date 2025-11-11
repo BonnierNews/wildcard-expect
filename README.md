@@ -87,6 +87,8 @@ We welcome contributions! If you have suggestions for improvements, new wildcard
 
 To publish a new version of this library to npm:
 
+Run `npm run bump` or:
+
 1.  Ensure all your changes are committed and pushed to the `main` branch.
 2.  Update the `version` field in `package.json` according to [semantic versioning](https://semver.org/).
 3.  Run the publish command:
