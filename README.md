@@ -87,14 +87,15 @@ We welcome contributions! If you have suggestions for improvements, new wildcard
 
 To publish a new version of this library to npm:
 
-Run `npm run bump` or:
+Run `npm run bumpp` or:
 
+1.  Run `npm run bump`
 1.  Ensure all your changes are committed and pushed to the `main` branch.
 2.  Update the `version` field in `package.json` according to [semantic versioning](https://semver.org/).
 3.  Run the publish command:
 
     ```bash
-    npm publish --access public
+    npm run publish
     ```
 
     This will publish the package to the public npm registry.
