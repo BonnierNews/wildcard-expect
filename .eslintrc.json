@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["@bonniernews/eslint-config/all", "@bonniernews/eslint-config/typescript", "prettier"],
+  "extends": ["@bonniernews/eslint-config/all", "@bonniernews/eslint-config/typescript", "plugin:prettier/recommended"],
   "rules": {
     "no-new": "off",
     "@bonniernews/typescript-rules/disallow-class-extends": "off",
