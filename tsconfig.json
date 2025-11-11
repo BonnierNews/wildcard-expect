@@ -5,19 +5,8 @@
     "noEmit": true,
     "moduleResolution": "bundler",
     "rootDir": ".",
-    "lib": [
-      "ES2017",
-      "DOM"
-    ],
-    "types": [
-      "node",
-      "chai"
-    ]
+    "lib": ["ES2017", "DOM"],
+    "types": ["node", "chai"]
   },
-  "include": [
-    "src",
-    "@types",
-    "index.ts",
-    "test"
-  ]
+  "include": ["src", "@types", "index.ts", "test"]
 }

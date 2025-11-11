@@ -82,10 +82,7 @@ function validateWildcards(expected: any, actual: any, path = ""): void {
             }
             break;
           case "date":
-            if (
-              !(actual[key] instanceof Date) &&
-              (typeof actual[key] !== "string" || isNaN(Date.parse(actual[key])))
-            ) {
+            if (!(actual[key] instanceof Date) && (typeof actual[key] !== "string" || isNaN(Date.parse(actual[key])))) {
               throw new Error(
                 `Expected ${currentPath} to be a Date object or a valid ISO date string, but got ${actual[key]}`
               );
@@ -105,16 +102,18 @@ function createExpectWithWildCard(actual: any): ReturnType<typeof expect> {
   const methods = [ "equal", "eql", "property", "include", "members", "keys" ];
   const deepMethods = [ "equal", "include", "eql" ];
 
-  const createMethod = (method: string) => (expected: any, ...args: any[]) => {
-    const replacedExpected = replaceWildcards(expected, actual);
-    if (method === "property" && args.length > 0) {
-      const replacedValue = replaceWildcards(args[0], actual[expected]);
-      (expect(actual) as any).to.have.property(expected, replacedValue);
-    } else {
-      (expect(actual) as any).to[method](replacedExpected, ...args);
-    }
-    validateWildcards(expected, actual);
-  };
+  const createMethod =
+    (method: string) =>
+      (expected: any, ...args: any[]) => {
+        const replacedExpected = replaceWildcards(expected, actual);
+        if (method === "property" && args.length > 0) {
+          const replacedValue = replaceWildcards(args[0], actual[expected]);
+          (expect(actual) as any).to.have.property(expected, replacedValue);
+        } else {
+          (expect(actual) as any).to[method](replacedExpected, ...args);
+        }
+        validateWildcards(expected, actual);
+      };
 
   const createDeepMethod = (method: string) => (expected: any) => {
     const replacedExpected = replaceWildcards(expected, actual);
