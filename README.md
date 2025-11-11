@@ -91,8 +91,8 @@ Run `npm run bumpp` or:
 
 1.  Run `npm run bump`
 1.  Ensure all your changes are committed and pushed to the `main` branch.
-2.  Update the `version` field in `package.json` according to [semantic versioning](https://semver.org/).
-3.  Run the publish command:
+1.  Update the `version` field in `package.json` according to [semantic versioning](https://semver.org/).
+1.  Run the publish command:
 
     ```bash
     npm publish --access public
