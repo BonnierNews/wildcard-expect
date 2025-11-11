@@ -33,6 +33,7 @@
     "format": "prettier --write . && eslint --fix .",
     "typecheck": "tsc --noEmit",
     "pretest": ":> logs/test.log",
+    "bump": "npm version patch -m 'Bump version to %s' && git push && git push --tags",
     "test": "mocha",
     "coverage": "c8 npm test && c8 check-coverage",
     "local-coverage": "c8 --reporter html npm test && c8 check-coverage || open ./coverage/index.html",
