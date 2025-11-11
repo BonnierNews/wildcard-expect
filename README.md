@@ -29,7 +29,6 @@ Let's say you're testing an API endpoint that returns a chat message object with
 ```typescript
 import wildcard from "@bonniernews/wildcard-expect"; // instead of import { expect } from "chai";
 
-
 describe("Chat API", () => {
   it("should return a valid chat structure with dynamic fields", () => {
     wildcard.expect(responseBody).to.deep.equal({
