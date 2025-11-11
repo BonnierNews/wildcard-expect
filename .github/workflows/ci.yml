@@ -28,11 +28,12 @@ jobs:
       - name: Check formatting
         run: |
           npm run format
-                if [ ! "$(git status --porcelain=v1)" == "" ]; then
-                git status --porcelain=v1
-                exit 1
-                fi
-
+          # Fail if formatting changes are detected
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Code is not formatted correctly. Please run 'npm run format'."
+            git status --porcelain
+            exit 1
+          fi
 
       - name: Check types
         run: npm run typecheck
