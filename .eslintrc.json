@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "extends": ["@bonniernews/eslint-config/all", "@bonniernews/eslint-config/typescript"],
+  "rules": {
+    "no-new": "off",
+    "@bonniernews/typescript-rules/disallow-class-extends": "off",
+    "@bonniernews/typescript-rules/disallow-non-es-compatible": "off"
+  }
+}
