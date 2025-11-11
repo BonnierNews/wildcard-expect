@@ -40,7 +40,7 @@
   },
   "author": "Bonnier News",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@bonniernews/eslint-config": "^1.2.0",
     "@bonniernews/tsconfig": "^0.0.2",
     "@types/chai": "^5.2.3",
