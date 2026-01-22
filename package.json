@@ -37,7 +37,7 @@
     "test": "mocha",
     "test-debug": "NODE_ENV=test mocha -n inspect-brk",
     "coverage": "c8 npm test && c8 check-coverage",
-    "local-coverage": "c8 --reporter html npm test && c8 check-coverage || open ./coverage/index.html",
+    "local-coverage": "c8 npm test && c8 check-coverage || open ./coverage/index.html",
     "prepublishOnly": "npm run build"
   },
   "author": "Bonnier News",
