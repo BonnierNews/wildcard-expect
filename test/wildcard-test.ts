@@ -5,6 +5,7 @@ describe("Testing using wildcards", () => {
     const obj = {
       name: "John",
       age: 30,
+      isActive: true,
       city: "New York",
       colors: ["red", "green", "blue"],
       additionalConfig: {
@@ -28,6 +29,7 @@ describe("Testing using wildcards", () => {
     wildcard.expect(obj).to.deep.equal({
       name: wildcard.string(),
       age: wildcard.number(),
+      isActive: wildcard.boolean(),
       city: wildcard.string(),
       colors: wildcard.array(),
       additionalConfig: wildcard.object(),
