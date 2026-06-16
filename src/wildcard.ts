@@ -61,6 +61,11 @@ function validateWildcards(expected: any, actual: any, path = ""): void {
               throw new Error(`Expected ${currentPath} to be a number, but got ${typeof actual[key]}`);
             }
             break;
+          case "boolean":
+            if (typeof actual[key] !== "boolean") {
+              throw new Error(`Expected ${currentPath} to be a boolean, but got ${typeof actual[key]}`);
+            }
+            break;
           case "function":
             if (typeof actual[key] !== "function") {
               throw new Error(`Expected ${currentPath} to be a function, but got ${typeof actual[key]}`);
@@ -138,6 +143,7 @@ function createExpectWithWildCard(actual: any): ReturnType<typeof expect> {
 const any = () => ({ __wildcard: "any" });
 const string = () => ({ __wildcard: "string" });
 const number = () => ({ __wildcard: "number" });
+const boolean = () => ({ __wildcard: "boolean" });
 const uuid = () => ({ __wildcard: "uuid" });
 const date = () => ({ __wildcard: "date" });
 const traceid = () => ({ __wildcard: "traceid" });
@@ -150,6 +156,7 @@ export default {
   any,
   string,
   number,
+  boolean,
   uuid,
   traceid,
   date,

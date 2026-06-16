@@ -71,6 +71,7 @@ You can use the following wildcard types:
 - `wildcard.any()`: Matches any value.
 - `wildcard.string()`: Matches any string.
 - `wildcard.number()`: Matches any number.
+- `wildcard.boolean()`: Matches any boolean.
 - `wildcard.object()`: Matches any non-null object.
 - `wildcard.array()`: Matches any array.
 - `wildcard.fn()`: Matches any function.
